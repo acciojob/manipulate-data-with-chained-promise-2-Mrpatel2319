@@ -1,4 +1,3 @@
-//your JS code here. If required.
 // Function to return a promise that resolves with an array of numbers after 3 seconds
 function getNumbers() {
   return new Promise((resolve) => {
@@ -15,7 +14,7 @@ getNumbers()
     return new Promise((resolve) => {
       setTimeout(() => {
         const evenNumbers = numbers.filter((num) => num % 2 === 0);
-        document.getElementById("output").textContent = `Filtered Even Numbers: ${evenNumbers.join(", ")}`;
+        document.getElementById("output").textContent = evenNumbers.join(", "); // Only numbers
         resolve(evenNumbers);
       }, 1000);
     });
@@ -25,7 +24,7 @@ getNumbers()
     return new Promise((resolve) => {
       setTimeout(() => {
         const multipliedNumbers = evenNumbers.map((num) => num * 2);
-        document.getElementById("output").textContent = `Multiplied Numbers: ${multipliedNumbers.join(", ")}`;
+        document.getElementById("output").textContent = multipliedNumbers.join(", "); // Only numbers
         resolve(multipliedNumbers);
       }, 2000);
     });
